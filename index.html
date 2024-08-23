@@ -26,20 +26,37 @@
     </a>
 </div>
 <hr>
+
 <div>
-    <a
-            style="cursor: pointer"
-            data-controller="clipboard"
-            data-clipboard-target-input-selector-value="#inputId"
-    >
-        click to copy
+    <!-- Usage with a selector by ID -->
+    <a style="cursor: pointer"
+       data-controller="clipboard"
+       data-clipboard-target-input-selector-value="#inputIdSelector">
+        Click to copy the text from the input with ID
     </a>
-    <label for="inputId">
-        <input type="text"
-               value="this text will be copied, since the attribute `data-[controller-name]-target-input-value` is defined"
-               name="inputName" id="inputId">
+    <label for="inputIdSelector"><input type="text" id="inputIdSelector" value="Text to copy by ID"></label>
+    <br>
+    <!-- Usage with a selector by name -->
+    <a style="cursor: pointer"
+       data-controller="clipboard"
+       data-clipboard-target-input-selector-value="[name='inputName']">
+        Click to copy the text from the input with name
+    </a>
+    <label>
+        <input type="text" name="inputName" value="Text to copy by name">
+    </label>
+<br>
+    <!-- Usage with a selector by class or other attribute -->
+    <a style="cursor: pointer"
+       data-controller="clipboard"
+       data-clipboard-target-input-selector-value=".inputClass">
+        Click to copy the text from the input with class
+    </a>
+    <label>
+        <input type="text" class="inputClass" value="Text to copy by class">
     </label>
 </div>
+
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

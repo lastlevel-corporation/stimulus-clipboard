@@ -1,4 +1,4 @@
-import {Controller} from '@hotwired/stimulus';
+import { Controller } from '@hotwired/stimulus';
 
 export default class extends Controller<HTMLElement> {
     static values = {
@@ -20,6 +20,7 @@ export default class extends Controller<HTMLElement> {
 
     private _copyToClipboard() {
         let textToCopy: string | undefined;
+
         if (this.textToCopyValue.length !== 0) {
             textToCopy = this.textToCopyValue;
         } else if (this.targetInputSelectorValue.length !== 0) {
@@ -32,7 +33,9 @@ export default class extends Controller<HTMLElement> {
         }
 
         if (textToCopy) {
-            navigator.clipboard.writeText(textToCopy).then(() => this.onSuccessCopy()).catch(() => this.onFailedCopy())
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => this.onSuccessCopy())
+                .catch(() => this.onFailedCopy());
         }
     }
 

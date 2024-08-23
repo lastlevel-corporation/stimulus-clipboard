@@ -1,5 +1,5 @@
 {
-    "name": "stimulus-clipboard",
+    "name": "@lastlevel/stimulus-clipboard",
     "version": "1.0.0",
     "description": "A Stimulus component for clipboard functionality",
     "type": "module",
