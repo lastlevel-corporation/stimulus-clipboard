@@ -1,15 +1,52 @@
 {
-  "name": "stimulus-clipboard",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "typescript": "^5.5.3",
-    "vite": "^5.4.1"
-  }
+    "name": "stimulus-clipboard",
+    "version": "1.0.0",
+    "description": "A Stimulus component for clipboard functionality",
+    "type": "module",
+    "keywords": [
+        "stimulus",
+        "clipboard",
+        "controller",
+        "copy"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lastlevel-corporation/stimulus-clipboard.git"
+    },
+    "author": "Ismael Lastlevel",
+    "license": "ISC",
+    "main": "./dist/clipboard_controller.cjs.js",
+    "module": "./dist/clipboard_controller.es.js",
+    "typings": "./dist/types/clipboard_controller.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/clipboard_controller.es.js",
+            "require": "./dist/clipboard_controller.cjs.js",
+            "types": "./dist/types/clipboard_controller.d.ts"
+        }
+    },
+    "files": [
+        "dist/",
+        "README.md"
+    ],
+    "peerDependencies": {
+        "@hotwired/stimulus": "^3.2.2"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build --watch",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@hotwired/stimulus": "^3.2.2",
+        "tslib": "^2.6.3"
+    },
+    "devDependencies": {
+        "@rollup/plugin-typescript": "^11.1.6",
+        "@types/node": "^22.5.0",
+        "prettier": "^3.3.3",
+        "rollup-plugin-typescript-paths": "^1.5.0",
+        "typescript": "^5.5.3",
+        "vite": "^5.4.1"
+    }
 }

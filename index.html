@@ -1,13 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Stimulus Clipboard Example</title>
+</head>
+<body>
+<div>
+    <a
+            style="cursor: pointer"
+            data-controller="clipboard"
+    >
+        this text will be copied, since the attributes `data-[controller-name]-text-to-copy-value` and
+        data-[controller-name]-text-to-copy-value are not defined
+    </a>
+</div>
+<hr>
+<div>
+    <a
+            style="cursor: pointer"
+            data-controller="clipboard"
+            data-clipboard-text-to-copy-value="this text will be copied, since the attribute `data-[controller-name]-text-to-copy-value` is defined"
+    >
+        click to copy
+    </a>
+</div>
+<hr>
+<div>
+    <a
+            style="cursor: pointer"
+            data-controller="clipboard"
+            data-clipboard-target-input-selector-value="#inputId"
+    >
+        click to copy
+    </a>
+    <label for="inputId">
+        <input type="text"
+               value="this text will be copied, since the attribute `data-[controller-name]-target-input-value` is defined"
+               name="inputName" id="inputId">
+    </label>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
 </html>
