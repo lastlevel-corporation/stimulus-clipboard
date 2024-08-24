@@ -12,9 +12,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/clipboard_controller.ts"),  // Entrée principale du package
+      entry: path.resolve(__dirname, "src/main_controller.ts"),  // Entrée principale du package
       name: "ClipboardController",                                    // Nom global (pour les UMD)
-      fileName: (format) => `clipboard_controller.${format}.js`,      // Noms des fichiers de sortie
+      fileName: (format) => `main_controller.${format}.js`,      // Noms des fichiers de sortie
       formats: ["es", "cjs", "umd"],                                  // Formats de sortie pour couvrir différents cas d'usage
     },
     rollupOptions: {
