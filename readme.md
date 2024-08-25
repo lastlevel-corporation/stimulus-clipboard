@@ -11,12 +11,12 @@ Install the package
 - via npm 
 
 ```sh
-$ npm i @lastlevel/stimulus-clipboard
+npm i @lastlevel/stimulus-clipboard
 ```
 or via yarn 
 
 ```sh
-$ yarn add @lastlevel/stimulus-clipboard
+yarn add @lastlevel/stimulus-clipboard
 ```
 
 ## Usage

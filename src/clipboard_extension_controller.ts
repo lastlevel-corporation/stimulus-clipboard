@@ -1,4 +1,4 @@
-import Clipboard from './controllers/clipboard_controller'
+import Clipboard from './controllers'
 
 /* stimulusFetch: 'lazy' */
 export default class extends Clipboard {

@@ -12,7 +12,7 @@ export default defineConfig({
     },
     build: {
         lib: {
-            entry: path.resolve(__dirname, "src/controllers/clipboard_controller.ts"),
+            entry: path.resolve(__dirname, "src/controllers/index.ts"),
             name: "StimulusClipboardController",
             fileName: (format) => `clipboard_controller.${format}.js`,
             formats: ["es", "cjs", "umd"],
