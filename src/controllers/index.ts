@@ -1,6 +1,6 @@
 import { Controller } from '@hotwired/stimulus';
 
-export default class extends Controller<HTMLElement> {
+export default class ClipboardController extends Controller<HTMLElement> {
     static values = {
         textToCopy: String,
         successMessage: String,
@@ -39,7 +39,7 @@ export default class extends Controller<HTMLElement> {
         }
     }
 
-    protected onSuccessCopy() {}
+    onSuccessCopy() {}
 
-    protected onFailedCopy() {}
+    onFailedCopy() {}
 }
