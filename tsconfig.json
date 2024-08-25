@@ -1,22 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ESNext",                          // Version de JavaScript cible
-    "module": "ESNext",                          // Module ES pour le bundling
-    "declaration": true,                         // Générer des fichiers .d.ts
-    "outDir": "dist",                            // Dossier de sortie pour les fichiers compilés
-    "strict": true,                              // Activer les vérifications strictes de TypeScript
-    "esModuleInterop": true,                     // Meilleure compatibilité des modules CommonJS
-    "moduleResolution": "Node",                  // Résolution des modules à la manière de Node.js
-    "skipLibCheck": true,                        // Ignorer la vérification des fichiers de bibliothèque
-    "forceConsistentCasingInFileNames": true,    // Forcer la casse cohérente dans les noms de fichiers
-    "resolveJsonModule": true,                   // Permet d'importer des fichiers JSON
-    "jsx": "preserve",                           // Option pour React (peut être ignorée si pas utilisée)
-    "lib": ["DOM", "ESNext"],                    // Bibliothèques utilisées
-    "baseUrl": "./",                             // Base pour les chemins relatifs
+    "target": "ESNext",
+    "module": "ESNext",
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "lib": ["DOM", "ESNext"],
+    "baseUrl": "./",
     "paths": {
-      "~/*": ["src/*"]                           // Alias pour les imports dans src
+      "~/*": ["src/controllers/*"]
     }
   },
-  "include": ["src"],                            // Inclure tout le code source
-  "exclude": ["node_modules", "dist"]            // Exclure les modules node et le dossier de sortie
+  "include": ["src/controllers"],
+  "exclude": ["node_modules", "dist"]
 }

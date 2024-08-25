@@ -1,6 +1,6 @@
 {
     "name": "@lastlevel/stimulus-clipboard",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "A Stimulus component for clipboard functionality",
     "type": "module",
     "keywords": [
@@ -17,7 +17,7 @@
     "license": "ISC",
     "main": "./dist/clipboard_controller.cjs.js",
     "module": "./dist/clipboard_controller.es.js",
-    "typings": "./dist/types/clipboard_controller.d.ts",
+    "typings": "./dist/types/controllers/clipboard_controller.d.ts",
     "exports": {
         ".": {
             "import": "./dist/clipboard_controller.es.js",
@@ -30,7 +30,7 @@
         "README.md"
     ],
     "peerDependencies": {
-        "@hotwired/stimulus": "^3.2.2"
+        "@hotwired/stimulus": "^3.0.0"
     },
     "scripts": {
         "dev": "vite",
@@ -38,7 +38,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@hotwired/stimulus": "^3.2.2",
+        "@hotwired/stimulus": "^3.0.0",
         "tslib": "^2.6.3"
     },
     "devDependencies": {
